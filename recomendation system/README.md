@@ -1,5 +1,9 @@
 ## recommendation sysytem
 
+before running: 
+
+    NOTE: pip install haversine
+
 * use several machine learning technologies to predict
 	* Each file are classes of different machine learning technologies. Each of these classes have the functions: fit, predict, score and predict_for_user. Note that these functions are identical to the methods for the SK-learn machine learning modules.
 	*For each of the recommendation classes, they have their own set of inputs. This can be inputted when you are calling the class. Typically, they require you to input the matrix X, your binary values of whether a store is a mall or not, and a feature matrix. Additionally, all the fit methods for these classes have the parameters (train_indices, test_indices), where train_indices and test_indices represent the training and test indices of the dataset. Note that both of these are not required values. If test_indices is given a matrix indicating the indices of that are in the testing set, then all the values where the indices indicate are turned to 0. In fit, it will create a X_predict matrix where tries to predict values based on algorithm of the recommendation system. Predict() has an input of the matrices consisting of indices of the matrix, where it will return the predicted values of X_predict based on the inputted matrix. Also, predict_for_user has the inputs (user_ratings, user_feat=None, k=10). user_ratings is a vector that indicates what stores does it have. user_feat maybe necessary since some of the algorithms require data about the user. k is the amount of items you recommend. 
